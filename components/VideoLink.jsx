@@ -15,7 +15,7 @@ const VideoLink = () => {
       <div className="flex flex-col gap-6 items-center justify-center h-full">
         <h1 className="text-3xl font-semibold">VidNotes</h1>
         <div className="relative h-9 w-96">
-          <div className="absolute inset-y-0 -inset-x-2 bg-blue-600 blur-md" />
+          <div className="absolute inset-y-0 -inset-x-2 bg-secondary blur-md" />
           <input
             value={link}
             onChange={(e) => setLink(e.target.value)}
@@ -27,10 +27,10 @@ const VideoLink = () => {
         </div>
         <button
           onClick={() => router.push(`/${getVideoId(link)}`)}
-          className="disabled:text-gray-500 disabled:cursor-not-allowed"
+          className="disabled:text-gray-500 disabled:cursor-not-allowed underline disabled:no-underline"
           disabled={!link.match(regex)}
         >
-          Submit
+          Go &rarr;
         </button>
       </div>
     </div>
