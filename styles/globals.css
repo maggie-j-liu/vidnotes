@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@page {
+  size: auto;
+  margin: 0;
+}
+
+@media print {
+  main :not(.printable) {
+    display: none;
+  }
+  div.printable {
+    margin: 1in;
+  }
+  textarea.printable {
+    margin: 0;
+  }
+  .printable {
+    display: block !important;
+    font-size: 12px;
+    line-height: 1.5;
+    max-width: 6.5in;
+    padding: 0;
+  }
+}
